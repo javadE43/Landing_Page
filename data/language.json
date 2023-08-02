@@ -1,0 +1,96 @@
+{
+  "en": {
+    "id":2,
+    "pageAbout": [
+      {
+        "title": "A brief summary of the activities! ",
+        "content": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:"
+      },
+      {
+        "title": "Ways of communication",
+        "communication": {
+          "email": "academyomidmehrban@gmail.com",
+          "phone": "021-1234 65 78"
+        }
+      }
+    ],
+    "header": {
+      "about": "about"
+    },
+    "boxone": {
+      "head": "Never lose hope!",
+      "contentMain": "Never lose hope!",
+      "content": "Please log in to your account"
+    },
+    "button": {
+      "signUp": "signUp",
+      "login": "login"
+    },
+    "boxTow": {
+      "head": "The services of Omid Mehraban Academy!        ",
+      "contentMain": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum"
+    },
+    "customer": {
+      "headTop": "We have had the honor of working with people ",
+      "headBottom": "We have had the honor of working with people ",
+      "username": "username"
+    },
+    "footer": {
+      "about": "All material and intellectual rights of this site belong to Omid Mehraban Academy and it is not legal to copy it.      "
+    },
+    "form": {
+      "signUp": "signUp",
+      "content": "After registration, you can use the site's services and contact you if needed. Name and Surname ",
+      "fullName": "fullName",
+      "phoneNumber": "phone",
+      "verifycode": "vrifyCode",
+      "buttonSubmit": "signUp",
+      "placeholder": {
+        "fullname": "Enter FullName",
+        "phoneNumber": "Enter Phone",
+        "verifyCode": "Enter verify Code"
+      }
+    }
+  },
+  "fa": {
+    "id":1,
+    "header": {
+      "about": " درباره ما"
+    },
+    "boxone": {
+      "head": "هیچوقت امیدِتو از دست نده!",
+      "contentMain": "اکنون امید مهربان اینجاست  تا بهترین خدمات اینستاگرام را به شمـــــــــــــا ارائه دهد. ",
+      "content": "لطفاً وارد حساب کاربری شــــــــــــــــــوید"
+    },
+    "button": {
+      "signUp": "ثبت نام",
+      "login": "ورود"
+    },
+    "boxTow": {
+      "head": "خدمات آکادمی امید مهربان ؛",
+      "contentMain": "مشاوره و آنالیز پیج جهـــــــــت امنیت - بازگردانی پیج های هک شده و... - دریافت تیک آبی - رفــــــــــــع محدودیت های پیج - آنالیز پیـــــــــــج جهت ارتقا - پشتیبانی پیج ها "
+    },
+    "customer": {
+      "headTop": "با افرادی که افتخار همکاری داشته ایم      ",
+      "headBottom": "و صد ها افراد معروف و محبوب دیگر",
+      "username": "نام افراد"
+    },
+    "footer": {
+      "about": "تمامی حقوق مادی و معنوی این سایت متعلق به آکادمی امید مهــــــــــــــــربان می باشد و کپی برداری از آن قانونی نمی باشد. "
+    },
+    "form": {
+      "signUp": "ثبت نام",
+      "titlesignup": "فرم ثبت نام",
+      "content": "پس از ثبت نام شما میتوانید از خدمات سایت استفاده کنید و در صورت نیاز با شما تماس خواهیم گرفت",
+      "fullName": "نام و نام خانوادگی",
+      "phoneNumber": "شماره موبایل",
+      "verifycode": "کد تایید",
+      "buttonSubmit": "ثبت نام",
+      "placeholder": {
+        "fullname": "نام و نام خانوادگی خود را وارد کنید",
+        "phoneNumber": "شماره موبایل خود را وارد کنید",
+        "verifyCode": "کد تایید را وارد کنید"
+      }
+    }
+  }
+}

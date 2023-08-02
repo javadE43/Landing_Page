@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "username":"نام افراد",
+        "image":"/images/customer1.png"
+    },
+    {
+        "id":2,
+        "username":"نام افراد",
+        "image":"/images/customer2.png"
+    },
+    {
+        "id":3,
+        "username":"نام افراد",
+        "image":"/images/customer3.png"
+    },
+    {
+        "id":4,
+        "username":"نام افراد",
+        "image":"/images/customer4.png"
+    },
+    {
+        "id":5,
+        "username":"نام افراد",
+        "image":"/images/customer5.png"
+    },
+    {
+        "id":6,
+        "username":"نام افراد",
+        "image":"/images/customer6.png"
+    },
+    {
+        "id":7,
+        "username":"نام افراد",
+        "image":"/images/customer7.png"
+    },
+    {
+        "id":8,
+        "username":"نام افراد",
+        "image":"/images/customer8.png"
+    }
+]
