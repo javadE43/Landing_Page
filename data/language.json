@@ -18,8 +18,8 @@
       "about": "about"
     },
     "boxone": {
-      "head": "Never lose hope!",
-      "contentMain": "Never lose hope!",
+      "head": "Lorem ipsum dolor sit amet",
+      "contentMain": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "content": "Please log in to your account"
     },
     "button": {
@@ -36,7 +36,7 @@
       "username": "username"
     },
     "footer": {
-      "about": "All material and intellectual rights of this site belong to Omid Mehraban Academy and it is not legal to copy it.      "
+      "content": "All material and intellectual rights of this site belong to Omid Mehraban Academy and it is not legal to copy it.      "
     },
     "form": {
       "signUp": "signUp",
@@ -76,7 +76,7 @@
       "username": "نام افراد"
     },
     "footer": {
-      "about": "تمامی حقوق مادی و معنوی این سایت متعلق به آکادمی امید مهــــــــــــــــربان می باشد و کپی برداری از آن قانونی نمی باشد. "
+      "content": "تمامی حقوق مادی و معنوی این سایت متعلق به آکادمی امید مهــــــــــــــــربان می باشد و کپی برداری از آن قانونی نمی باشد. "
     },
     "form": {
       "signUp": "ثبت نام",

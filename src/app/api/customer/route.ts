@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export async function GET(request: NextRequest) {
-  const filePath = path.join(process.cwd(), "data/language.json");
+  const filePath = path.join(process.cwd(), "data/custmerData.json");
   const data = fs.readFileSync(filePath, "utf8");
   let submissions = JSON.parse(data);
   return NextResponse.json({
@@ -11,3 +11,7 @@ export async function GET(request: NextRequest) {
     message: "This message has been successfully sent",
   });
 }
+
+
+
+

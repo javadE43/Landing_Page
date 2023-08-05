@@ -29,7 +29,7 @@ export default function BoxTow() {
       <span className="w-flex w-[75px]">
         <Logo />
       </span>
-      <span className="-translate-y-[11px] -translate-x-1 sm:translate-y-0 md:-translate-x-1 md:translate-y-3  w-flex w-[22px]">
+      <span className={`-translate-y-[11px] sm:translate-y-0 md:-translate-x-1 md:translate-y-3  w-flex w-[22px] ${state.key ==="en"?"rotate-180 md:translate-x-1":"-translate-x-1"}`}>
         <Chack />
       </span>
     </div>

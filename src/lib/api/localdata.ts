@@ -28,3 +28,19 @@ export async function apiRegisterUser(){
 
   return handleResponse(response).then((data) => data);
 }
+
+export async function getCustomers() {
+  const res = await fetch(`${SERVER_ENDPOINT}/api/customer`, {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
+ 

@@ -2,7 +2,7 @@ import React from "react";
 
 export function SvgCountryCode1() {
   return (
-    <div>
+    <div className="h-full">
       <svg
         width="100%"
         height="100%"
@@ -24,7 +24,7 @@ export function SvgCountryCode1() {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <rect x="1" y="1.5" width="68" height="43" rx="11" stroke="#FFF8E8" stroke-width="2" />
+        <rect x="1" y="1.5" width="68" height="43" rx="11" stroke="#FFF8E8" strokeWidth="2" />
       </svg>
     </div>
   );

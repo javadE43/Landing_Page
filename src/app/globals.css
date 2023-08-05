@@ -38,8 +38,8 @@
   .normalLink {
     @apply order-2 w-[194px] h-[32px] flex items-center gap-5 pr-1 pt-3 pb-2.5 rounded-lg text-meta-1 my-1;
   }
-  input{
-    min-height: 66px;
+  input {
+    min-height: 45px;
   }
 }
 .about__phone {
@@ -99,7 +99,7 @@
   .header__nav__item__about__link {
     @apply text-16 flex;
   }
-  .header__nav__item__about__link>span {
+  .header__nav__item__about__link > span {
     @apply text-16 leading-20 px-2;
   }
 
@@ -123,7 +123,7 @@
   }
 
   .box__one__container__title__h1 {
-    @apply  text-32 leading-32 border-b-2 border-base-light md:border-none -mx-[2%] md:-mx-[4%] text-base-yellow md:text-[56px]  lg:text-[76px]  lg:m-0 lg:p-0;
+    @apply text-32 leading-32 border-b-2 border-base-light md:border-none -mx-[2%] md:-mx-[4%] text-base-yellow md:text-[56px]  lg:text-[76px]  lg:m-0 lg:p-0;
     font-family: Doran, "Open Sans", sans-serif !important;
     box-sizing: border-box;
     padding: 0;
@@ -153,7 +153,7 @@
     @apply bg-base-light  border-base-light md:border-base-yellow md:bg-base-yellow h-[25px] text-16 leading-24 flex p-1 items-center justify-center ml-[12px] text-base_dark min-w-[95px] rounded-[5px] md:rounded-[10px] border-2 md:min-h-[40px] md:min-w-[158px] hover:bg-base-light md:hover:bg-base-yellow md:hover:text-base_dark lg:min-w-[200px] lg:min-h-[58px] lg:text-28 lg:rounded-xl;
   }
 
-  .login__home{
+  .login__home {
     @apply text-base-light bg-transparent hover:bg-base-light hover:text-base_dark border-base-light md:hover:bg-base-yellow md:hover:border-base-yellow;
   }
 
@@ -190,7 +190,7 @@
     @apply flex justify-around items-center md:py-0 md:pt-1;
   }
   .customer__container__profile__customer__wraper {
-    @apply w-full flex justify-around items-center py-1;
+    @apply w-full flex justify-around items-center py-1 overflow-hidden;
   }
   .customer__container__box__text {
     @apply hidden md:flex justify-center items-center text-center border-[1.3px] border-base-yellow rounded-lg overflow-hidden text-white md:min-w-[89px] md:w-[89px] md:h-[72px] md:text-14 md:leading-20 md:p-0 lg:text-14 lg:leading-20;
@@ -217,21 +217,33 @@
 
   /* LOGIN FORM  START*/
 
-  .section__form{
-    @apply h-[80%]
+  .section__form {
+    @apply h-[75%];
   }
 
   .form {
     @apply bg-transparent overflow-hidden h-full flex flex-col justify-evenly;
   }
-  .form__wraper__input{
-   @apply flex flex-col min-h-[74px] h-[74px];
+  .box__select__phonenumber__wraper {
+    @apply flex justify-between w-full items-center h-[45px] md:h-[66px];
   }
-  .form__label{
-   @apply text-white h-[24px] text-16 leading-16;
+  .box__select__countery {
+    @apply flex h-full w-[75%] relative border-2 border-base-light rounded-[10px];
   }
-  .form__input{
-   @apply h-[66px] min-h-[66px] bg-transparent text-white outline-none border-2 border-base-light rounded-xl py-2 px-2 md:h-[66px] focus:border-base-yellow;
+  .form__wraper__input {
+    @apply flex flex-col min-h-[74] h-[74px] md:min-h-[110px] md:h-[110px];
+  }
+  .form__label {
+    @apply text-white h-[24px] text-16 leading-16;
+  }
+  .form__input {
+    @apply h-[45px] md:min-h-[66px] min-h-[45px] bg-transparent text-white outline-none border-2 border-base-light rounded-xl py-2 px-2 md:h-[66px] focus:border-base-yellow;
+  }
+  .form__input__box__country {
+    @apply h-[45px] md:min-h-[66px] min-h-[45px] bg-transparent text-white outline-none py-2 px-2 md:h-[66px];
+  }
+  .wraper__cuntrycode:has(input:focus) {
+    @apply border-base-yellow;
   }
   /* LOGIN FORM  END*/
 
@@ -241,7 +253,7 @@
     @apply flex flex-col justify-center items-center h-full w-full mx-auto;
   }
   .container__page__wraper__signup__login {
-    @apply min-w-[305px] min-h-[462px] w-[358px] md:min-w-[470px] md:min-h-[579px];
+    @apply min-w-[305px] min-h-[462px] w-[358px] md:min-w-[470px] md:min-h-[579px] flex flex-col justify-between;
   }
   .container__page__wraper__signup__login__head {
     @apply text-white flex flex-col items-center gap-y-1 py-3 h-[20%];
@@ -337,4 +349,60 @@
   .react-tel-input .flag-dropdown.open .selected-flag {
     @apply !bg-transparent;
   }
+
+  .dropdown{
+    @apply absolute inline-block my-[50%] mx-[50%];
+  }
+
+  .dropdown:hover .drobdown__option{
+   display: inline-block;
+   position: absolute;
+  }
+
+  .hovcard{
+    @apply bg-white text-base_dark border-none p-[1rem] inline-block hover:bg-white hover:bg-base_dark focus:bg-shade-300;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.45);
+    background-color: whitesmoke;
+  }
+  button.hovcard::after{
+    margin-left: 4px;
+    content: "";
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    transform: scale(0.8);
+  }
+  .drobdown__option{
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    top: 24px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.45);
+    background-color: white;
+  }
+
+.drobdown__option li{
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+.drobdown__option li:hover{
+background-color: rgba(0, 0, 0, 023);
+
+}
+
+  .hovcard:hover .drobdown__option{
+   display: inline-block;
+
+  }
+
+.li__country{
+  display: inline-block;
+  list-style: none;
+  text-align: left;
+} 
+
+
 }

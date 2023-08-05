@@ -50,7 +50,7 @@ export default function Header() {
   //FETCH API LANGUAGE START TEST
   useEffect(() => {
     const res = async () => {
-      const response = await fetch("/api/lan", {
+      const response = await fetch("/api/lan", {next:{cache:"no-store"},
         cache: "no-store",
         method: "GET",
         headers: {

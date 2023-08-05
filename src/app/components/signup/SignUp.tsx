@@ -2,9 +2,10 @@
 "use client";
 import { useAppContext } from "../../../context/contextLanguage";
 import { useState } from "react";
-import ButtonCountry from "../buttonCountry/Button";
 import { useForm } from "react-hook-form";
 import Button from "../button/Button";
+import { SvgCountryCode1 } from "../buttonCountry/SvgCountryCode";
+import SelectCountry from "../buttonCountry/SelectCountry";
 
 export const SignUp = () => {
   const { state, dispatch } = useAppContext();
@@ -30,30 +31,30 @@ export const SignUp = () => {
       }
       reset();
     } catch (error: any) {
-      console.log(
-        "There was a problem with the fetch operation " + error.message
-      );
+      console.log("There was a problem with the fetch operation " + error.message);
     }
   };
 
-  const handlvalue = (val: any) => {
-    // setCode()
-    console.log(val);
+  //handleMainValueCounterCode
+  const handleMainValueCounterCode = (code: number) => {
+    if (code) {
+      setCode(code);
+    }
+    console.log(code);
   };
+
   return (
     <section className="section__form">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="form"
-      >
+      {/* SECTION START*/}
+      <form onSubmit={handleSubmit(onSubmit)} className="form">
+        {/*FORM START*/}
+        {/* START BOX FULL NAME */}
         <div className="form__wraper__input">
           <label className="form__label" htmlFor="name">
-            {/* نام و نام خانوادگی */}
             {state?.language?.form?.fullName}
           </label>
           <input
             type="text"
-            // placeholder="نام و نام خانوادگی خود را وارد کنید"
             placeholder={state?.language?.form?.placeholder?.fullName}
             className="form__input"
             {...register("fullName", {
@@ -68,21 +69,63 @@ export const SignUp = () => {
               },
             })}
           />
-          {errors.fullName && (
-            <p className="text-dominant-500 text-1">
-              {errors.fullName.message}
-            </p>
-          )}
+          {errors.fullName && <p className="text-dominant-500 text-1">{errors.fullName.message}</p>}
         </div>
-        <ButtonCountry handlvalue={handlvalue} />
+        {/* END BOX FULL NAME */}
+        {/* BOX PGONENUMBER AND COUNTRY CODE ------ START */}
         <div className="form__wraper__input">
           <label className="form__label" htmlFor="name">
-            {/* کد تایید دریافت شده را وارد کنید */}
+            {/* phoneNumber*/}
+            {state?.language?.form?.phoneNumber}
+          </label>
+          <div className="box__select__phonenumber__wraper">
+            <div className="box__select__countery  wraper__cuntrycode">
+              <input
+                type="tel"
+                placeholder={state?.language?.form?.placeholder?.fullName}
+                className={`form__input__box__country w-[65%]`}
+                {...register("fullName", {
+                  required: true,
+                  minLength: {
+                    value: 7,
+                    message: "حداقل کاراکتر (10)",
+                  },
+                  maxLength: {
+                    value: 200,
+                    message: "بیشترین کارکتر (200)",
+                  },
+                })}
+              />
+              <span
+                className={`h-[2px] w-[30px] md:w-[55px] absolute bg-base-light rotate-90  bottom-[50%] ${
+                  state.key === "en" ? "right-[104px]" : "left-[104px]"
+                }`}
+              ></span>
+              <div className={`form__input__box__country w-[40%] text-end`}>
+                <SelectCountry
+                  handleValueCounterCode={handleMainValueCounterCode}
+                  dir={state?.key}
+                />
+              </div>
+            </div>
+            <button
+              type="button"
+              className={`w-[20%] rounded-xl h-full mx-h-[66px] ${
+                state.key === "en" ? "rotate-[180deg]" : "rotate-0"
+              }`}
+            >
+              <SvgCountryCode1 />
+            </button>
+          </div>
+        </div>
+        {/* BOX PGONENUMBER AND COUNTRY CODE ------ END */}
+        {/* START VERIFYCODE BOX */}
+        <div className="form__wraper__input">
+          <label className="form__label" htmlFor="name">
             {state?.language?.form?.verifycode}
           </label>
           <input
             type="number"
-            // placeholder="کد تایید"
             placeholder={state?.language?.form?.placeholder?.verifyCode}
             className="form__input"
             {...register("code", {
@@ -97,23 +140,17 @@ export const SignUp = () => {
               },
             })}
           />
-          {errors.fullName && (
-            <p className="text-dominant-500 text-1">
-              {errors.fullName.message}
-            </p>
-          )}
+          {errors.fullName && <p className="text-dominant-500 text-1">{errors.fullName.message}</p>}
         </div>
+        {/* END VERIFYCODE BOX */}
+        {/* START SUBMIT BOX */}
         <div className="form__wraper__input">
-          <Button 
-            type="submit"
-            // content={"ثبت نام"}
-            content={state?.language?.button?.signUp}
-          />
+          <Button type="submit" content={state?.language?.button?.signUp} />
         </div>
+        {/* END SUBMIT BOX */}
+        {/*FORM END*/}
       </form>
-      {isSubmitSuccessful && (
-        <p className="text-dominant-500 text-1"> Message has been Sent</p>
-      )}
+      {/* SECTION END */}
     </section>
   );
 };
